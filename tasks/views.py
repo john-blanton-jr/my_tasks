@@ -1,6 +1,6 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def show_tasks(request):
-    return HttpResponse("This view is working")
+
+    return render(request, "tasks/tasks.html")
