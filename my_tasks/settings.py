@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # My apps
     'tasks.apps.TasksConfig',
     'django_bootstrap5',
+    'django_bootstrap_input_group',
 
     # Default django apps
     'django.contrib.admin',
