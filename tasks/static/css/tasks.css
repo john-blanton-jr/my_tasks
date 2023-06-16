@@ -1,9 +1,5 @@
-.input1 {
-  width: 100%;
-  color: orange;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
-.test {
-  width: 80%;
+body {
+  font-family: 'Roboto', sans-serif;
 }
