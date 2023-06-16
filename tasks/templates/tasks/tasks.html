@@ -18,6 +18,17 @@
     </nav>
   </header> {% endcomment %}
   <main>
-    <p>Yup, It works!!</p>
+    <h1>My Tasks</h1>
+    {% if tasks.all %}
+      {% for task in tasks %}
+        <div>
+          <p>{{ task.task }}</p>
+          <p>{{ task.completed|yesno }}</p>
+          <a href="delete/{{ task.id }}">Delete</a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>You have no tasks</p>
+    {% endif %}
   </main>
 {% endblock content %}
