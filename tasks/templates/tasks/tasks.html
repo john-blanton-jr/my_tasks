@@ -19,25 +19,45 @@
   </header> {% endcomment %}
   <main>
     <h1>My Tasks</h1>
-    <form method="post" action=".">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button>Submit</button>
-    </form>
-    {% if tasks.all %}
-      {% for task in tasks %}
-        <div>
-          <p>{{ task.task }}</p>
-          {% if task.completed %}
-            <p>{{ task.completed|yesno }}</p>
-          {% else %}
-            <a href="{% url 'mark_completed' task.id %}">Completed?</a>
-          {% endif %}
-          <a href="{% url 'delete' task.id %}">Delete</a>
+    <section class="bg-dark text-light p-5">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mb-md-0">Enter your task</h3>
+          <div class="input-group">
+            <form method="post" action=".">
+              {% csrf_token %}
+              {{ form }}
+              <button type="button" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </div>
         </div>
-      {% endfor %}
-    {% else %}
-      <p>You have no tasks</p>
-    {% endif %}
+      </section>
+      <section class="bg-primary text-light p-5">
+        <div class="container">
+          <div class="d-md-flex justify-content-between align-items-center">
+            <h3 class="mb-3 mb-md-0">Enter your task</h3>
+            <div class="input-group ">
+              <input type="text" class="form-control" placeholder="Enter Email" />
+              <button class="btn btn-dark btn-lg" type="button">Submit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% if tasks.all %}
+        {% for task in tasks %}
+          <div>
+            <p>{{ task.task }}</p>
+            {% if task.completed %}
+              <p>{{ task.completed|yesno }}</p>
+            {% else %}
+              <a href="{% url 'mark_completed' task.id %}">Completed?</a>
+            {% endif %}
+            <a href="{% url 'delete' task.id %}">Delete</a>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>You have no tasks</p>
+      {% endif %}
+    </div>
   </main>
 {% endblock content %}

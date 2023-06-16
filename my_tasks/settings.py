@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My apps
     'tasks.apps.TasksConfig',
+    'django_bootstrap5',
 
     # Default django apps
     'django.contrib.admin',
