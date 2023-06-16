@@ -19,12 +19,21 @@
   </header> {% endcomment %}
   <main>
     <h1>My Tasks</h1>
+    <form method="post" action=".">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button>Submit</button>
+    </form>
     {% if tasks.all %}
       {% for task in tasks %}
         <div>
           <p>{{ task.task }}</p>
-          <p>{{ task.completed|yesno }}</p>
-          <a href="delete/{{ task.id }}">Delete</a>
+          {% if task.completed %}
+            <p>{{ task.completed|yesno }}</p>
+          {% else %}
+            <a href="{% url 'mark_completed' task.id %}">Completed?</a>
+          {% endif %}
+          <a href="{% url 'delete' task.id %}">Delete</a>
         </div>
       {% endfor %}
     {% else %}
