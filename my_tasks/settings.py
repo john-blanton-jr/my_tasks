@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'tasks.apps.TasksConfig',
     'accounts.apps.AccountsConfig',
     'django_bootstrap5',
-    'django_bootstrap_input_group',
+    'bootstrap_modal_forms',
 
     # Default django apps
     'django.contrib.admin',

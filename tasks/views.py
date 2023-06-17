@@ -29,7 +29,7 @@ def show_tasks(request):
         "form": form,
     }
 
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(owner=request.user)
     context = {
         "tasks": tasks,
         "form": form

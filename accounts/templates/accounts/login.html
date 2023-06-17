@@ -1,16 +1,16 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
 {% block content %}
-  <header>
-    {% comment %} <nav>
-      <a href="{% url 'recipe_list' %}">Main page</a>
-    </nav> {% endcomment %}
-  </header>
   <main>
-    <h1>Login!</h1>
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button>Submit</button>
-    </form>
+    <section>
+      <div class="content d-flex flex-column align-items-center">
+        <h1 class="text-light">Login!</h1>
+        <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form form show_label=False size="sm" wrapper_class="pb-3" %}
+          {% bootstrap_button "Login" button_type="submit" button_class="btn-primary mb-5" size="sm" %}
+        </form>
+      </div>
+    </section>
   </main>
 {% endblock content %}
