@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My apps
     'tasks.apps.TasksConfig',
+    'accounts.apps.AccountsConfig',
     'django_bootstrap5',
     'django_bootstrap_input_group',
 

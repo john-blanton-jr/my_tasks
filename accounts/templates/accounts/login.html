@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+  <header>
+    {% comment %} <nav>
+      <a href="{% url 'recipe_list' %}">Main page</a>
+    </nav> {% endcomment %}
+  </header>
+  <main>
+    <h1>Login!</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button>Submit</button>
+    </form>
+  </main>
+{% endblock content %}
