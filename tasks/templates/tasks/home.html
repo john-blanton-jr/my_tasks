@@ -25,51 +25,127 @@
       </div>
     </section>
     <!-- Testimonials -->
-    <section class="p-5">
+    <section class="p-5 bg-primary">
       <div class="container">
-        <div class="row text-center g-4">
-          <div class="card m-3" style="width: 18rem;">
-            <img src="https://static.wikia.nocookie.net/muppet/images/f/f6/Oscarthegrouchy.jpg/revision/latest?cb=20160909061029"
-                 class="card-img-top"
-                 alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row g-4">
+          <h2 class="text-center text-light">Satisfied Users</h2>
+          <p class="text-center text-light">Sign up today to be like these super cool users.</p>
+          <div class=" bg-primary col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/men/49.jpg"
+                     alt=""
+                     class="rounded-circle mb-3">
+                <div class="card-title h4 fw-bold">Joshua James</div>
+                <hr>
+                <p class="card-text fw-semibold lh-sm">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quasi officia nesciunt quam!
+                </p>
+                <a href="{% url 'signup' %}"
+                   class="btn btn-primary btn-sm"
+                   tabindex="-1"
+                   role="button"
+                   aria-disabled="true">Sign Up</a>
+              </div>
             </div>
           </div>
-          <div class="card m-3" style="width: 18rem;">
-            <img src="https://static.wikia.nocookie.net/muppet/images/f/f6/Oscarthegrouchy.jpg/revision/latest?cb=20160909061029"
-                 class="card-img-top"
-                 alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class=" bg-primary col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/women/37.jpg"
+                     alt=""
+                     class="rounded-circle mb-3">
+                <div class="card-title h4 fw-bold">Pam Davidson</div>
+                <hr>
+                <p class="card-text fw-semibold lh-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis porro nesciunt qui consectetur!
+                </p>
+                <a href="{% url 'signup' %}"
+                   class="btn btn-primary btn-sm"
+                   tabindex="-1"
+                   role="button"
+                   aria-disabled="true">Sign Up</a>
+              </div>
             </div>
           </div>
-          <div class="card m-3" style="width: 18rem;">
-            <img src="https://static.wikia.nocookie.net/muppet/images/f/f6/Oscarthegrouchy.jpg/revision/latest?cb=20160909061029"
-                 class="card-img-top"
-                 alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class=" bg-primary col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/men/28.jpg"
+                     alt=""
+                     class="rounded-circle mb-3">
+                <div class="card-title h4 fw-bold">Donald Chen</div>
+                <hr>
+                <p class="card-text fw-semibold lh-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem earum labore nesciunt architecto.
+                </p>
+                <a href="{% url 'signup' %}"
+                   class="btn btn-primary btn-sm"
+                   tabindex="-1"
+                   role="button"
+                   aria-disabled="true">Sign Up</a>
+              </div>
             </div>
           </div>
-          <div class="card m-3" style="width: 18rem;">
-            <img src="https://static.wikia.nocookie.net/muppet/images/f/f6/Oscarthegrouchy.jpg/revision/latest?cb=20160909061029"
-                 class="card-img-top"
-                 alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class=" bg-primary col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                     alt=""
+                     class="rounded-circle mb-3">
+                <div class="card-title h4 fw-bold">Laura Dixon</div>
+                <hr>
+                <p class="card-text fw-semibold lh-sm">
+                  Lorem ipsum dolor sit amet, adipisicing elit. Consequatur incidunt dolorum repellendus voluptate!
+                </p>
+                <a href="{% url 'signup' %}"
+                   class="btn btn-primary btn-sm"
+                   tabindex="-1"
+                   role="button"
+                   aria-disabled="true">Sign Up</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Testimonial Quote -->
+    <section class="p-4">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>So simple even I can figure it out.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Oscar the grouch in <cite title="Source Title">Garbage Times</cite>
+        </figcaption>
+      </figure>
+    </section>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <img class="img-fluid w-50 d-none d-sm-block"
+               src="{% static 'mockup.png' %}"
+               alt="" />
+          <div class="m-4">
+            <h1>
+              Remember tasks like a <span class="text-primary">Pro</span>
+            </h1>
+            <p class="lead my-4">So simple and easy to use. You will never forget anything ever again.</p>
+            <a href="{% url 'signup' %}"
+               class="btn btn-primary btn-lg"
+               tabindex="-1"
+               role="button"
+               aria-disabled="true">Sign Up Today!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-light p-5 text-center">
+      <div class="container">
+        <p>Copyright &copy; John Blanton Jr.</p>
+      </div>
+    </footer>
   </main>
 {% endblock content %}
