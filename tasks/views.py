@@ -6,6 +6,14 @@ from tasks.forms import TaskForm
 from django.contrib.auth.decorators import login_required
 
 
+def show_home(request):
+    user = request.user
+    context = {
+        "user": user,
+    }
+    return render(request, "tasks/home.html", context)
+
+
 @login_required
 def show_tasks(request):
     if request.method == "POST":

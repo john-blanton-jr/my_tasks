@@ -19,12 +19,12 @@ from django.urls import path, include
 from django.shortcuts import redirect
 
 
-def redirect_to_show_tasks(request):
-    return redirect("show_tasks")
+def redirect_to_show_home(request):
+    return redirect("show_home")
 
 
 urlpatterns = [
-    path("", redirect_to_show_tasks, name="home"),
+    path("", redirect_to_show_home, name="home"),
     path('admin/', admin.site.urls),
     path("accounts/", include("accounts.urls")),
     path("tasks/", include("tasks.urls")),
