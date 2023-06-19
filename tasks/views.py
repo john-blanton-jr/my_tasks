@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from tasks.models import Task
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -50,3 +50,20 @@ def mark_completed(request, id):
     task.completed = True
     task.save()
     return HttpResponseRedirect(reverse('show_tasks'))
+
+
+@login_required
+def edit_task(request, id):
+    task = get_object_or_404(Task, id=id)
+    if request.method == "POST":
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect("show_tasks")
+    else:
+        form = TaskForm(instance=task)
+    context = {
+        "apply": task,
+        "form": form,
+    }
+    return render(request, "tasks/edit.html", context)
