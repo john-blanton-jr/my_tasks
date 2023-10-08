@@ -47,15 +47,15 @@ Can be used or adapted any way you would like. Feel free to clone and change it 
 Fork and clone the repo
 
 ```bash
-  git clone https://gitlab.com/ypour_user_after_fork/Autotrackr.git
+  git clone https://gitlab.com/ypour_user_after_fork/my_tasks.git
 ```
 
 Go to the project directory
 ```bash
-  cd Autotrackr
+  cd my_tasks
 ```
 
-Create a virtual envionment
+Create a virtual environment
 
 Windows
 ```bash
