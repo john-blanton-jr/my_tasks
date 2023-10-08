@@ -5,55 +5,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% load django_bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
+    {% load django_bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
     {% bootstrap_messages %}
-    <title>
-      {% block title %}
-      {% endblock title %}
-    </title>
+    <title>{% block title %} {% endblock title %}</title>
     <link rel="stylesheet" href="{% static "css/tasks.css" %}">
   </head>
   <body class="h-100 bg-dark">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark py3 ">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark py3">
       <div class="container">
         <a href="{% url 'show_home' %}" class="navbar-brand">My Tasks Trakkr</a>
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navmenu">
+        <button
+          class="navbar-toggler"
+          f
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
             {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
-              </li>
-              <li class="nav-item">
-                <a href="{% url 'show_tasks' %}" class="nav-link">Your Tasks</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">About</a>
-              </li>
+            <li class="nav-item">
+              <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'show_tasks' %}" class="nav-link">Your Tasks</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">About</a>
+            </li>
             {% else %}
-              <li class="nav-item">
-                <a href="{% url 'signup' %}" class="nav-link">Sign up</a>
-              </li>
-              <li class="nav-item">
-                <a href="{% url 'login' %}" class="nav-link">Login</a>
-              </li>
+            <li class="nav-item">
+              <a href="{% url 'signup' %}" class="nav-link">Sign up</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'login' %}" class="nav-link">Login</a>
+            </li>
             {% endif %}
           </ul>
         </div>
       </div>
     </nav>
-    {% block content %}
-    {% endblock content %}
+    {% block content %} {% endblock content %}
     <!-- Footer -->
-    <footer class="bg-dark text-light p-3 text-center fixed-bottom border-top">
+    <footer class="bg-dark text-light p-3 text-center border-top">
       <div class="container">
         <p>Copyright &copy; John Blanton Jr.</p>
       </div>
