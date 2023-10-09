@@ -55,7 +55,7 @@ Go to the project directory
   cd my_tasks
 ```
 
-Create a virtual environment
+### Create a virtual environment
 
 Windows
 ```bash
