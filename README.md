@@ -8,7 +8,7 @@ A simple task app demonstrating CRUD operations and Authentication.
 
 - User Signup/Login
 - Modern Front-end design
-- Create, Read, Update, Delete tasks
+- Create, Read, Update, and Delete tasks
 - sqlite3 database
 
 
